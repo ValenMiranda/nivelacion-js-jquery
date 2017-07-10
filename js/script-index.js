@@ -19,7 +19,14 @@ $(document).ready( function(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+	//console.log('Recipes: ', recipesArray);
+	var contador = 0;
+	recipesArray.forEach(function(element){
+		if(element.highlighted == true){
+			contador++;
+			renderRecipe(element);
+		}
+	});
 }
 
 /*
